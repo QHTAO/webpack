@@ -4,7 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run mock\"",
     "start": "webpack-dev-server --mode development --open",
+    "mock": "nodemon server.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,12 +16,16 @@
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "babel-loader": "^8.2.1",
+    "concurrently": "^5.3.0",
+    "json-server": "^0.16.3",
+    "mockjs": "^1.1.0",
     "webpack": "^4.4.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.7.1"
   },
   "dependencies": {
     "react": "^16.14.0",
+    "react-bootstrap": "^0.33.1",
     "react-dom": "^16.14.0"
   }
 }
